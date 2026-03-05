@@ -7,7 +7,8 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [isVisible, setIsVisible] = useState({});
+  // Fix: Properly type the isVisible state
+  const [isVisible, setIsVisible] = useState<{[key: string]: boolean}>({});
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -111,14 +112,14 @@ export default function Home() {
       issuer: "Google", 
       icon: "☁️",
       link: "https://drive.google.com/file/d/1yGzJdzPP0p44WtkOgoDZshDstd_q3JGN/view",
-      
+      date: "2024"
     },
     { 
       name: "AWS Cloud Practitioner Essentials", 
       issuer: "AWS", 
       icon: "⚡",
       link: "https://drive.google.com/file/d/1fWvkiSDoLWkYlAOyxZNjAq-g7EBz45WC/view",
-      
+      date: "2024"
     },
     { 
       name: "AWS Educate Machine Learning Foundations", 
@@ -126,7 +127,7 @@ export default function Home() {
       icon: "🤖",
       link: "https://www.credly.com/badges/69b23a38-010f-4437-b84a-9baec14da390/linked_in_profile",
       credential: "Credly Badge",
-     
+      date: "2024"
     },
     { 
       name: "Google Data Analytics", 
@@ -134,28 +135,28 @@ export default function Home() {
       icon: "📊",
       link: "https://www.coursera.org/account/accomplishments/verify/H64RV376HYP6",
       credential: "H64RV376HYP6",
-      
+      date: "2024"
     },
     { 
       name: "Deloitte Cyber Job Simulation", 
       issuer: "Deloitte", 
       icon: "🔒",
       link: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_68f4c7d6804d25cb7bb4ddc2_1760873995762_completion_certificate.pdf",
-     
+      date: "2024"
     },
     { 
       name: "CLA - Programming Essentials in C", 
       issuer: "Cisco", 
       icon: "⚙️",
       link: "https://drive.google.com/file/d/1reISq9HwZLR3Aw3-SLYM4diriLpru432/view",
-      
+      date: "Oct 2024"
     },
     { 
       name: "PCAP - Programming Essentials in Python", 
       issuer: "Cisco", 
       icon: "🐍",
       link: "https://drive.google.com/file/d/1reISq9HwZLR3Aw3-SLYM4diriLpru432/view",
-   
+      date: "Oct 2024"
     },
     { 
       name: "Introduction to Cybersecurity", 
@@ -163,7 +164,7 @@ export default function Home() {
       icon: "🛡️",
       link: "https://www.credly.com/badges/cd6ed2c0-ff4b-4031-a35b-09b8bddf253e/linked_in_profile",
       credential: "Credly Badge",
-      
+      date: "2024"
     }
   ];
 
@@ -310,7 +311,7 @@ export default function Home() {
 
         {/* Main Content */}
         <main className="pt-16">
-          {/* Hero Section - Cards Removed */}
+          {/* Hero Section */}
           <section id="home" className="relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 dark:from-blue-900/20 dark:to-indigo-900/20" />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
@@ -329,7 +330,7 @@ export default function Home() {
                   </h1>
                   <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-2xl">
                     AI Engineer • Machine Learning • Deep Learning • NLP • Full-Stack Developer
-Building intelligent, scalable applications for real-world problems.
+                    Building intelligent, scalable applications for real-world problems.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <a
@@ -373,7 +374,7 @@ Building intelligent, scalable applications for real-world problems.
                       className="p-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
                       title="Email"
                     >
-                      <span className="text-xl">✉️ </span>
+                      <span className="text-xl">✉️</span>
                     </a>
                     <a
                       href={personalInfo.resume}
