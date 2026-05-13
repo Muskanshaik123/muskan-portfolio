@@ -10,6 +10,15 @@ export default function Home() {
   // Fix: Properly type the isVisible state
   const [isVisible, setIsVisible] = useState<{[key: string]: boolean}>({});
 
+  // Apply dark mode class to html element
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -122,6 +131,13 @@ export default function Home() {
       date: "2024"
     },
     { 
+      name: "AWS Certified Cloud Practitioner", 
+      issuer: "AWS", 
+      icon: "☁️",
+      link: "https://drive.google.com/file/d/17OJUZQ4HUXUmHaVS98nm74JQTm0uxlqu/view",
+      date: "2024"
+    },
+    { 
       name: "AWS Educate Machine Learning Foundations", 
       issuer: "AWS", 
       icon: "🤖",
@@ -217,7 +233,7 @@ export default function Home() {
   const navItems = ['Home', 'Projects', 'Experience', 'Certifications', 'Achievements'];
 
   return (
-    <div className={`${darkMode ? 'dark' : ''}`}>
+    <>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 transition-colors duration-500">
         
         {/* Navigation */}
@@ -674,6 +690,6 @@ export default function Home() {
           animation: pulse 3s ease-in-out infinite;
         }
       `}</style>
-    </div>
+    </>
   );
 }
