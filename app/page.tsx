@@ -35,7 +35,7 @@ export default function Home() {
     linkedin: "https://www.linkedin.com/in/shaik-muskan-9572232a4/",
     leetcode: "https://leetcode.com/u/muskan_shaik/",
     hackerrank: "https://www.hackerrank.com/profile/shaikmuskan471",
-    resume: "https://drive.google.com/file/d/1Rd9KluxOrpe9UC41exbj3UDsMtyy0_Bs/view?usp=sharing"
+    resume: "https://drive.google.com/file/d/1htv3QcksnXOfaGR0zaAuSwN_qFO3DDsj/view?usp=sharing"
   };
 
   const projects = [
