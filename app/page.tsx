@@ -116,6 +116,13 @@ export default function Home() {
       ];
 
   const certifications = [
+	  { 
+      name: "AWS Certified Cloud Practitioner", 
+      issuer: "AWS", 
+      icon: "☁️",
+      link: "https://drive.google.com/file/d/17OJUZQ4HUXUmHaVS98nm74JQTm0uxlqu/view",
+      date: "2026"
+    },
     { 
       name: "Google Cloud Skills - Gen AI (Beginner, Intermediate & Advanced)", 
       issuer: "Google", 
@@ -131,13 +138,6 @@ export default function Home() {
       date: "2024"
     },
     { 
-      name: "AWS Certified Cloud Practitioner", 
-      issuer: "AWS", 
-      icon: "☁️",
-      link: "https://drive.google.com/file/d/17OJUZQ4HUXUmHaVS98nm74JQTm0uxlqu/view",
-      date: "2024"
-    },
-    { 
       name: "AWS Educate Machine Learning Foundations", 
       issuer: "AWS", 
       icon: "🤖",
@@ -146,7 +146,7 @@ export default function Home() {
       date: "2024"
     },
     { 
-      name: "Google Data Analytics", 
+      name: "Foundations: Data, Data, Everywhere", 
       issuer: "Coursera", 
       icon: "📊",
       link: "https://www.coursera.org/account/accomplishments/verify/H64RV376HYP6",
